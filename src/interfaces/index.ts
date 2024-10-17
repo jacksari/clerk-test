@@ -79,3 +79,15 @@ export interface IResponseGetProfile {
   status: boolean;
   message: string;
 }
+
+export interface IResponseGetDoctorById {
+  data: Doctor;
+  status: boolean;
+  message: string;
+}
+
+export interface IResponseGetDoctors {
+  data: Doctor[];
+  status: boolean;
+  message: string;
+}

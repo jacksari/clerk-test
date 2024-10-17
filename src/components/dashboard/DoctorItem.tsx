@@ -11,7 +11,7 @@ export default function DoctorItem(
   return (
     <Link
       key={doctor.id}
-      href={`/`}
+      href={`/doctores/${doctor.id}`}
       className="flex items-center flex-col bg-gray-100 rounded-lg overflow-hidden shadow"
     >
       <div className="flex items-center flex-col gap-2 p-2 pt-4">

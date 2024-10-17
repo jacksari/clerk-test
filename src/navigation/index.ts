@@ -26,6 +26,11 @@ const navigation = [
     icon: FaRegCircle,
     href: "/clinicas",
   },
+  {
+    label: "Doctores",
+    icon: FaRegCircle,
+    href: "/doctores",
+  },
 ];
 
 export default navigation;
