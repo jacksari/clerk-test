@@ -214,6 +214,46 @@ const appointments = [
     cost: 150,
     status: "pending",
   },
+  {
+    id: 3,
+    userId: 1,
+    clinic: getRandomClinic(clinics),
+    doctor: getRandomDoctor(doctors),
+    date: "2024-10-20",
+    time: "16:00",
+    cost: 200,
+    status: "cancelled",
+  },
+  {
+    id: 4,
+    userId: 1,
+    clinic: getRandomClinic(clinics),
+    doctor: getRandomDoctor(doctors),
+    date: "2024-10-21",
+    time: "11:00",
+    cost: 250,
+    status: "confirmed",
+  },
+  {
+    id: 5,
+    userId: 1,
+    clinic: getRandomClinic(clinics),
+    doctor: getRandomDoctor(doctors),
+    date: "2024-10-22",
+    time: "10:00",
+    cost: 300,
+    status: "pending",
+  },
+  {
+    id: 6,
+    userId: 1,
+    clinic: getRandomClinic(clinics),
+    doctor: getRandomDoctor(doctors),
+    date: "2024-10-19",
+    time: "15:00",
+    cost: 350,
+    status: "cancelled",
+  }
 ] as Appointment[];
 
 const users = [
