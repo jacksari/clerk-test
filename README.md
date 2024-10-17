@@ -70,48 +70,47 @@ Las siguientes APIs se utilizan para obtener datos simulados:
 # Ejemplo del Servicio de Datos
 
 ```typescript
-Copy code
 import { useApi } from "@/config/useApi";
 
 const baseUrl = "/api";
 
 class DataService {
-  async appointments(): Promise<any> {
+  async appointments() {
     const response = await fetch(`${baseUrl}/appointments`);
     if (!response.ok) {
-      throw new Error('Error fetching appointments');
+      throw new Error("Error fetching appointments");
     }
     return await response.json();
   }
 
-  async doctors(): Promise<any> {
+  async doctors() {
     const response = await fetch(`${baseUrl}/doctors`);
     if (!response.ok) {
-      throw new Error('Error fetching doctors');
+      throw new Error("Error fetching doctors");
     }
     return await response.json();
   }
 
-  async clinics(): Promise<any> {
+  async clinics() {
     const response = await fetch(`${baseUrl}/clinics`);
     if (!response.ok) {
-      throw new Error('Error fetching clinics');
+      throw new Error("Error fetching clinics");
     }
     return await response.json();
   }
 
-  async profile(): Promise<any> {
+  async profile() {
     const response = await fetch(`${baseUrl}/profile`);
     if (!response.ok) {
-      throw new Error('Error fetching profile');
+      throw new Error("Error fetching profile");
     }
     return await response.json();
   }
 
-  async doctorById(id: string): Promise<any> {
+  async doctorById(id: string) {
     const response = await fetch(`${baseUrl}/doctor?id=${id}`);
     if (!response.ok) {
-      throw new Error('Error fetching doctor');
+      throw new Error("Error fetching doctor");
     }
     return await response.json();
   }
