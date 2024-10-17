@@ -8,6 +8,7 @@ import { money } from "@/helpers/money";
 import { BiStreetView } from "react-icons/bi";
 import { MdModeComment, MdModeEdit } from "react-icons/md";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function ProfileMyAppointmentsMain() {
   const [appointments, setAppointments] = useState<Appointment[]>([]);
@@ -111,11 +112,17 @@ export default function ProfileMyAppointmentsMain() {
                   </td>
                   <td className="p-4 border-b border-slate-200">
                     <div className="flex items-center gap-3">
-                      <img
-                        src={appointment.doctor.profileImageUrl}
-                        alt={appointment.doctor.name}
-                        className="relative inline-block h-9 w-9 !rounded-full object-cover object-center"
-                      />
+                      {appointment.doctor.profileImageUrl ? (
+                        <Image
+                          width={36}
+                          height={36}
+                          src={appointment.doctor.profileImageUrl}
+                          alt={appointment.doctor.name}
+                          className="relative inline-block h-9 w-9 !rounded-full object-cover object-center"
+                        />
+                      ) : (
+                        <div className="w-9 h-9 bg-gray-200 rounded-full"></div>
+                      )}
                       <div className="flex flex-col">
                         <p className="text-sm font-semibold text-slate-700">
                           {appointment.doctor.name}

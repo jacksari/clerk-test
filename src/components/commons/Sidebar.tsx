@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import navigation from "@/navigation";
 import Image from "next/image";
 import Link from "next/link";
@@ -13,8 +13,8 @@ export default function Sidebar() {
         style={{ height: "5rem" }}
       >
         <Image
-        width={150}
-        height={40}
+          width={150}
+          height={40}
           src="https://digitalhublatam.com/wp-content/uploads/2023/03/logo-digitalhub.png.webp"
           alt=""
         />

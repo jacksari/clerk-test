@@ -1,4 +1,5 @@
 import { Doctor } from "@/interfaces";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function DoctorItem(
@@ -14,11 +15,22 @@ export default function DoctorItem(
       className="flex items-center flex-col bg-gray-100 rounded-lg overflow-hidden shadow"
     >
       <div className="flex items-center flex-col gap-2 p-2 pt-4">
-        <img
+        {/* <Image
+                width={80}
+                height={80}
           className="w-20 h-20 rounded-full"
           src={doctor.profileImageUrl}
           alt=""
-        />
+        /> */}
+        {doctor.profileImageUrl ? (
+          <img
+            src={doctor.profileImageUrl}
+            alt={doctor.name}
+            className="w-20 h-20 rounded-full"
+          />
+        ) : (
+          <div className="w-20 h-20 bg-gray-200 rounded-full"></div>
+        )}
 
         <h3>{doctor.name}</h3>
       </div>
