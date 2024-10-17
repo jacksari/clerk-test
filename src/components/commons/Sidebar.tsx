@@ -13,7 +13,8 @@ export default function Sidebar() {
         style={{ height: "5rem" }}
       >
         <Image
-          style={{ height: "100%" }}
+        width={150}
+        height={40}
           src="https://digitalhublatam.com/wp-content/uploads/2023/03/logo-digitalhub.png.webp"
           alt=""
         />
