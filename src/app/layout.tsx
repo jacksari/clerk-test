@@ -25,6 +25,10 @@ export default function RootLayout({
             name="viewport"
             content="width=device-width, initial-scale=1.0"
           />
+          <link
+            rel="icon"
+            href="/favicon-digitalhub.png.webp"
+          />
           <title>Digital Hub</title>
         </head>
 
