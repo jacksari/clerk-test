@@ -1,36 +1,117 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Proyecto Next.js
 
-## Getting Started
+Este proyecto utiliza Next.js junto con Clerk para la autenticación, y APIs de Next.js para manejar datos estáticos simulados.
 
-First, run the development server:
+## Requisitos
+
+- Node.js versión 20 o superior.
+
+## Instrucciones de instalación
+
+1. Clona el repositorio:
+
+```bash
+git clone https://github.com/jacksari/clerk-test.git
+cd clerk-test
+```
+
+
+2. Instala las dependencias:
+
+```bash
+npm install 
+```
+
+3. Crea un archivo .env en la raíz del proyecto y añade las siguientes variables de entorno:
+
+```bash
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_ZGl2ZXJzZS1kdWNrLTIyLmNsZXJrLmFjY291bnRzLmRldiQ
+CLERK_SECRET_KEY=sk_test_Q1dUEneAIArvCdDAUMNWudauWlrBxag8FVmczzDOqg
+```
+
+4. Para iniciar el proyecto en modo desarrollo:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. Para compilar el proyecto localmente:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Despliegue en Vercel
 
-## Learn More
+Cuando despliegues el proyecto en Vercel, asegúrate de agregar las variables de entorno mencionadas arriba (NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY y CLERK_SECRET_KEY) en la configuración del proyecto de Vercel.
 
-To learn more about Next.js, take a look at the following resources:
+# Datos Simulados y APIs
+Este proyecto utiliza datos estáticos simulados (fake data) y las APIs de Next.js para simular interacciones de datos. Los endpoints de la API están ubicados en /api, y puedes ver los servicios de datos que interactúan con estas APIs en el archivo DataService.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# APIs Disponibles
+Las siguientes APIs se utilizan para obtener datos simulados:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- /api/appointments: Obtiene las citas.
+- /api/doctors: Obtiene los médicos.
+- /api/clinics: Obtiene las clínicas.
+- /api/profile: Obtiene el perfil del usuario.
+- /api/doctor?id={id}: Obtiene un médico específico por ID.
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# Ejemplo del Servicio de Datos
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```typescript
+Copy code
+import { useApi } from "@/config/useApi";
+
+const baseUrl = "/api";
+
+class DataService {
+  async appointments(): Promise<any> {
+    const response = await fetch(`${baseUrl}/appointments`);
+    if (!response.ok) {
+      throw new Error('Error fetching appointments');
+    }
+    return await response.json();
+  }
+
+  async doctors(): Promise<any> {
+    const response = await fetch(`${baseUrl}/doctors`);
+    if (!response.ok) {
+      throw new Error('Error fetching doctors');
+    }
+    return await response.json();
+  }
+
+  async clinics(): Promise<any> {
+    const response = await fetch(`${baseUrl}/clinics`);
+    if (!response.ok) {
+      throw new Error('Error fetching clinics');
+    }
+    return await response.json();
+  }
+
+  async profile(): Promise<any> {
+    const response = await fetch(`${baseUrl}/profile`);
+    if (!response.ok) {
+      throw new Error('Error fetching profile');
+    }
+    return await response.json();
+  }
+
+  async doctorById(id: string): Promise<any> {
+    const response = await fetch(`${baseUrl}/doctor?id=${id}`);
+    if (!response.ok) {
+      throw new Error('Error fetching doctor');
+    }
+    return await response.json();
+  }
+}
+
+export default new DataService();
+```
+
+
+
+
+
