@@ -48,6 +48,15 @@ Cuando despliegues el proyecto en Vercel, asegúrate de agregar las variables de
 # Datos Simulados y APIs
 Este proyecto utiliza datos estáticos simulados (fake data) y las APIs de Next.js para simular interacciones de datos. Los endpoints de la API están ubicados en /api, y puedes ver los servicios de datos que interactúan con estas APIs en el archivo DataService.
 
+# Pantallas disponibles
+- clinicas
+- doctores
+- mi perfil
+- mis citas
+- mis doctores favoritos
+- home
+- doctores por id
+
 # APIs Disponibles
 Las siguientes APIs se utilizan para obtener datos simulados:
 
