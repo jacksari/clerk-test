@@ -1,5 +1,4 @@
-import { clinics, doctors, users } from "@/datafake";
-import { Clinic } from "@/interfaces";
+import { users } from "@/datafake";
 
 export async function GET() {
   const data = users[0];
