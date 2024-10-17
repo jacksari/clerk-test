@@ -6,7 +6,7 @@ export default function Breadcrumb(
   }>
 ) {
   return (
-    <nav className="flex bg-gray-200 p-4 rounded-md mb-4" aria-label="Breadcrumb">
+    <nav className="flex bg-gray-200 p-4 rounded-md mb-4 breadcrumb" aria-label="Breadcrumb">
       <ol className="inline-flex items-center space-x-1 md:space-x-3 w-full justify-between">
         <h2 className="text-xl font-semibold text-gray-900">{props.name}</h2>
 

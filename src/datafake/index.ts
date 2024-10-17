@@ -170,6 +170,146 @@ const doctors = [
       },
     ],
   },
+  {
+    id: 7,
+    name: "Dr. María Pérez",
+    specialty: "Dermatology",
+    clinicId: 2,
+    clinicName: "Skin Health Clinic",
+    profileImageUrl: `https://picsum.photos/200/300?random=${Math.random()}`,
+    availableTimes: [
+      {
+        id: 19,
+        date: "2024-10-18",
+        time: "10:00",
+        isAvailable: true,
+      },
+      {
+        id: 20,
+        date: "2024-10-20",
+        time: "14:30",
+        isAvailable: true,
+      },
+      {
+        id: 21,
+        date: "2024-10-22",
+        time: "09:00",
+        isAvailable: false,
+      },
+    ],
+  },
+  {
+    id: 8,
+    name: "Dr. Luis Rodríguez",
+    specialty: "Cardiology",
+    clinicId: 4,
+    clinicName: "Heart Care Center",
+    profileImageUrl: `https://picsum.photos/200/300?random=${Math.random()}`,
+    availableTimes: [
+      {
+        id: 22,
+        date: "2024-10-18",
+        time: "08:00",
+        isAvailable: false,
+      },
+      {
+        id: 23,
+        date: "2024-10-20",
+        time: "13:00",
+        isAvailable: true,
+      },
+      {
+        id: 24,
+        date: "2024-10-23",
+        time: "15:30",
+        isAvailable: true,
+      },
+    ],
+  },
+  {
+    id: 9,
+    name: "Dra. Elena Morales",
+    specialty: "Pediatrics",
+    clinicId: 5,
+    clinicName: "Children's Medical Center",
+    profileImageUrl: `https://picsum.photos/200/300?random=${Math.random()}`,
+    availableTimes: [
+      {
+        id: 25,
+        date: "2024-10-19",
+        time: "09:30",
+        isAvailable: true,
+      },
+      {
+        id: 26,
+        date: "2024-10-21",
+        time: "11:00",
+        isAvailable: false,
+      },
+      {
+        id: 27,
+        date: "2024-10-24",
+        time: "16:30",
+        isAvailable: true,
+      },
+    ],
+  },
+  {
+    id: 10,
+    name: "Dr. Javier Gutiérrez",
+    specialty: "Neurology",
+    clinicId: 1,
+    clinicName: "Brain Health Clinic",
+    profileImageUrl: `https://picsum.photos/200/300?random=${Math.random()}`,
+    availableTimes: [
+      {
+        id: 28,
+        date: "2024-10-18",
+        time: "07:00",
+        isAvailable: true,
+      },
+      {
+        id: 29,
+        date: "2024-10-20",
+        time: "12:00",
+        isAvailable: true,
+      },
+      {
+        id: 30,
+        date: "2024-10-22",
+        time: "17:00",
+        isAvailable: false,
+      },
+    ],
+  },
+  {
+    id: 11,
+    name: "Dra. Sofía Martínez",
+    specialty: "Psychiatry",
+    clinicId: 6,
+    clinicName: "Mental Wellness Clinic",
+    profileImageUrl: `https://picsum.photos/200/300?random=${Math.random()}`,
+    availableTimes: [
+      {
+        id: 31,
+        date: "2024-10-18",
+        time: "15:00",
+        isAvailable: true,
+      },
+      {
+        id: 32,
+        date: "2024-10-19",
+        time: "10:30",
+        isAvailable: true,
+      },
+      {
+        id: 33,
+        date: "2024-10-21",
+        time: "13:00",
+        isAvailable: false,
+      },
+    ],
+  },
 ] as Doctor[];
 
 const clinics = [
@@ -190,6 +330,24 @@ const clinics = [
     name: "Mental Health Center",
     address: "789 Pine Road, Healthville",
     doctors: doctors.filter((doctor) => doctor.clinicId === 3),
+  },
+  {
+    id: 4,
+    name: "Heart Care Center",
+    address: "456 Elm Street, Cardioville",
+    doctors: doctors.filter((doctor) => doctor.clinicId === 4),
+  },
+  {
+    id: 5,
+    name: "Children's Medical Center",
+    address: "321 Oak Avenue, Kidstown",
+    doctors: doctors.filter((doctor) => doctor.clinicId === 5),
+  },
+  {
+    id: 6,
+    name: "Vision Care Clinic",
+    address: "987 Maple Lane, Sight City",
+    doctors: doctors.filter((doctor) => doctor.clinicId === 6),
   },
 ] as Clinic[];
 
@@ -253,7 +411,7 @@ const appointments = [
     time: "15:00",
     cost: 350,
     status: "cancelled",
-  }
+  },
 ] as Appointment[];
 
 const users = [

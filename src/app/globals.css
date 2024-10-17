@@ -25,3 +25,13 @@ body {
     text-wrap: balance;
   }
 }
+
+.main-body{
+  /* background: red; */
+  overflow: auto;
+}
+
+.breadcrumb {
+  position: sticky;
+  top: -32px;
+}

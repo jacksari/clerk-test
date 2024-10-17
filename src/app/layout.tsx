@@ -47,7 +47,7 @@ export default function RootLayout({
                 <div className="flex flex-col w-full h-full">
                   <Header />
                   <main
-                    className="flex flex-col w-full h-full p-8 border-t-2 border-gray-300"
+                    className="flex flex-col w-full h-full p-8 border-t-2 border-gray-300 main-body"
                     style={{ height: "calc(100vh - 5rem)" }}
                   >
                     {children}
