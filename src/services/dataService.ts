@@ -1,6 +1,5 @@
 import { useApi } from "@/config/useApi";
 
-// services/DataService.ts
 const baseUrl = "/api";
 
 class DataService {

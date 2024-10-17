@@ -1,5 +1,6 @@
 'use client'
 import navigation from "@/navigation";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 export default function Sidebar() {
@@ -11,7 +12,7 @@ export default function Sidebar() {
         className="p-5 flex items-center justify-center "
         style={{ height: "5rem" }}
       >
-        <img
+        <Image
           style={{ height: "100%" }}
           src="https://digitalhublatam.com/wp-content/uploads/2023/03/logo-digitalhub.png.webp"
           alt=""
